@@ -22,5 +22,5 @@ ENV PATH=$PATH:/opt/sbt/bin:/opt
 WORKDIR /code
 
 ENTRYPOINT ["compile"]
-CMD ["\"project server\"", "assembly"]
+CMD ["project server", "assembly"]
 

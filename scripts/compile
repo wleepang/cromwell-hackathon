@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --rm -v $(pwd):/code cromwell-compiler
+docker run --rm -v $(pwd):/code cromwell-compiler "$@"
