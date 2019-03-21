@@ -4,4 +4,7 @@ cd /code/cromwell
 sbt "$@"
 
 cd /code
+rm cromwell-*-SNAP.jar
 cp -v $(find ./cromwell -type f -name "cromwell-*-SNAP.jar") .
+ln -sf cromwell-*-SNAP.jar cromwell.jar
+

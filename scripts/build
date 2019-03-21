@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CWD=`pwd`
+
+cd containers/compiler
+docker build -t cromwell-compiler .
+cd $CWD
+
+cd containers/runner
+docker build -t cromwell-runner .
+cd $CWD
+
