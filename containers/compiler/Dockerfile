@@ -14,7 +14,7 @@ RUN curl -LO https://piccolo.link/sbt-1.2.3.tgz \
   && tar -xzf sbt*.tgz \
   && rm sbt*.tgz
 
-RUN printf "#!/bin/sh\ncd ./cromwell\nsbt \"\$@\"\ncp $(find . -type f -name \"cromwell-*-SNAP.jar\") .." > compile
+COPY compile .
 RUN chmod +x compile
 
 ENV PATH=$PATH:/opt/sbt/bin:/opt
