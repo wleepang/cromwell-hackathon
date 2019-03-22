@@ -42,9 +42,16 @@ Runs the cromwell server locally
 
 #### Usage
 
-Use the container to run cromwell
+Use the container to run cromwell in `server` mode
 
 ```bash
 cd ~/cromwell-hackathon/
 ./scripts/cromwell
+```
 
+This will create a cromwell server on your local machine preconfigured to usse the Batch environment for the hackathon.
+
+You can access the server at:
+http://localhost:8000/
+
+and either use a web-browser and the SwaggerUI or `curl` to submit workflows to it.
