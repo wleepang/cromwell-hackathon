@@ -1,5 +1,8 @@
 FROM openjdk:8-jdk-alpine AS builder
 
+RUN rm -rf /var/cache/apk/* \
+ && rm -rf /tmp/*
+RUN apk update
 RUN apk add \
   curl \
   tar \
@@ -10,7 +13,7 @@ RUN apk add \
 
 WORKDIR /opt
 
-RUN curl -LO https://piccolo.link/sbt-1.2.3.tgz \
+RUN curl -s -LO https://piccolo.link/sbt-1.2.3.tgz \
   && tar -xzf sbt*.tgz \
   && rm sbt*.tgz
 
